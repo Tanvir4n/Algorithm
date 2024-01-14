@@ -1,21 +1,36 @@
 void merge(vector<int>& arr, int left, int mid, int right){
+    
+    vector<int> temp(right - left + 1);
+    int i = left;
+    int j = mid + 1;
+    int k = 0;
 
-    int i=left;
-    int j=mid+1;
-    int k=left;
-
-    while(i<=mid && j<=right){
+    while(i <= mid && j <= right){
         if(arr[i] <= arr[j]){
             temp[k] = arr[i];
             i++;
-            k++;
         }
         else{
             temp[k] = arr[j];
             j++;
-            k++;
         }
-        
+        k++;
+    }
+
+    while(i <= mid){
+        temp[k] = arr[i];
+        i++;
+        k++;
+    }
+
+    while(j <= right){
+        temp[k] = arr[j];
+        j++;
+        k++;
+    }
+
+    for(k=0; k<temp.size(); k++){
+        arr[left + k] = temp[k];
     }
 }
 
