@@ -1,4 +1,4 @@
-void binary_search(int n, int target, int arr[]){
+int binary_search(int n, int target, int arr[]){
     int left = 0;
     int right = arr.size() - 1;                            //-1 to access the last element where index started from 0
 
