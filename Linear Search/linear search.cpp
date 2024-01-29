@@ -1,4 +1,4 @@
-void linear_search(int n, int arr[], int target){
+int linear_search(int n, int arr[], int target){
     for(int i=0; i<n; i++){
         if(arr[i] == target){
             return i;                               // Return the index if target is found
