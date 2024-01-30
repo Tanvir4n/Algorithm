@@ -48,3 +48,39 @@ signed main(){
     }
     return 0;
 }
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int linear_search(int n, vector<int>&arr, int target){
+
+    for(int i=0; i<n; i++){
+        if(arr[i] == target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(){
+
+    int n,target;
+    cin>>n>>target;
+
+    vector<int>arr(n);
+
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    int result = linear_search(n, arr, target);
+
+    if(result != -1){
+        cout<<"Index : "<<result<<endl;
+    }
+    else{
+        cout<<"Element not found"<<endl;
+    }
+}
+
