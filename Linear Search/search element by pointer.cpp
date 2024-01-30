@@ -1,34 +1,43 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
 
-int linerSearch(int *p, int n, int value)
-{
-    for(int i = 0; i < n; i++)
-    {
-        if(*(p+i)==value)
-        {
+using namespace std;
+
+int linear_search(int *p, int n, int value){
+
+    for(int i=0; i<n; i++){
+        if(*(p + i) == value){
             return i;
         }
     }
     return -1;
 }
-int main()
-{
+
+int main(){
+
     int n;
-    printf("Enter the array size: ");
-    scanf("%d", &n);
-    int ar[n];
-    printf("Enter the element of array: ");
-    for(int i = 0; i < n; i++)
-    {
-        scanf("%d", &ar[i]);
+    cout<<"Enter the array size: ";
+    cin>>n;
+
+    int arr[n];
+
+    cout<<"Enter elements of the array: ";
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
     }
-    int *p;
-    p = ar;
+
+    int *p = arr;
+
     int value;
-    printf("Enter the search element: ");
-    scanf("%d", &value);
-    int result = linerSearch(p, n, value);
-    if(result == -1) printf("Not found\n");
-    else printf("Found at index %d : ",result);
+    cout<<"Enter the search element: ";
+    cin>>value;
+
+    int result = linear_search(p, n, value);
+
+    if(result == -1){
+        cout<<"Element not found"<<endl;
+    }
+    else{
+        cout<<"Found element at index "<<result<<endl;
+    }
     return 0;
 }
