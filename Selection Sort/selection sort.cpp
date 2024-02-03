@@ -22,6 +22,6 @@ void selection_sort(vector<int>&arr){
 
 /*
 
-time complexity n^2
+time complexity O(n^2)
 
 */
