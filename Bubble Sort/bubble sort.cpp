@@ -17,7 +17,9 @@ for(int i=0; i<n-1; i++){
 
 /*
 
-time complexity 
+time complexity
+
+The best time complexity of bubble sort is O(n), and this occurs when the array is already sorted.
 
 average/worst time complexity is O(n²)
 
