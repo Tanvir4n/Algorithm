@@ -17,4 +17,9 @@ for(int i=0; i<n-1; i++){
 
 /*
 
+time complexity 
+
+average/worst time complexity is O(n²)
+
+
 */
