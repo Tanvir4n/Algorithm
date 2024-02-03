@@ -19,3 +19,9 @@ void selection_sort(vector<int>&arr){
     cout<<endl;
     cout<<"Number of swaps needed: "<<swaps<<endl;
 }
+
+/*
+
+time complexity n^2
+
+*/
