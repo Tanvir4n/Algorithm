@@ -1,4 +1,3 @@
-// C++ Implementation of the Quick Sort Algorithm.
 #include <iostream>
 using namespace std;
 
