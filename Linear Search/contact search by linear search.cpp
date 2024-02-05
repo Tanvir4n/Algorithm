@@ -29,10 +29,10 @@ int main(){
     int result = linear_search(n, arr, target);
 
     if(result != -1){
-        cout<<"String '"<<target<<"'found at index"<<result<<endl;
+        cout<<"String '"<<target<<"' found at index "<<result<<endl;
     }
     else{
-        cout<<"String"<<target<<"not found"<<endl;
+        cout<<"String '"<<target<<"' not found"<<endl;
     }
 
     return 0;
