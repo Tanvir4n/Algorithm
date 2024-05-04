@@ -16,7 +16,7 @@ void Fast(){
     cin.tie(NULL);
     cout.tie(NULL);
 }
-// Function to find minimum number of coins needed to make amount V using a greedy approach
+
 vector<int> minCoinsGreedy(int amount, vector<int>& denominations){
    
     vector<int>coinsUsed;
