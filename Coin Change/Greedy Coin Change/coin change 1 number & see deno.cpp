@@ -45,17 +45,24 @@ signed main(){
     vector<int> coinsUsed = minCoinsGreedy(amount, denominations);
 
     cout<<"Minimum number of coins needed for amount "<<amount<<": "<<coinsUsed.size()<<endl;
-
-    cout<<"Coins used: ";
-    for(int coin : coinsUsed){
-        cout<<coin<<" ";
-    }
-    cout<<endl;
+    // high to min order
+    // cout<<"Coins used: ";
+    // for(int coin : coinsUsed){
+    //     cout<<coin<<" ";
+    // }
+    // cout<<endl;
     // cout<<"Coins used: ";
     // for(int i=0; i<coinsUsed.size(); i++){
     //     cout<<coinsUsed[i]<<" ";
     // }
     // cout<<endl;
+
+    // min to high order
+    cout<<"Coins used are: ";
+    for(int i=coinsUsed.size()-1; i>=0; i--){
+        cout<<coinsUsed[i]<<" ";
+    }
+    cout<<endl;
 
     return 0;
 }
