@@ -53,3 +53,61 @@ signed main(){
     return 0;
 }
 // https://vjudge.net/problem/SPOJ-KNAPSACK#author=CSE_CU_18
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define int long long
+#define ll long long
+#define ull unsigned long long
+#define ui unsigned int
+#define pi acos(-1)
+#define pb push_back
+#define endl "\n"
+#define nl "\n"
+
+void ISO(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+}
+
+int knapsack(int s, vector<pair<int, int>>& item){
+    
+    vector<vector<int>>dp(item.size()+1, vector<int>(s+1, 0));
+
+    for(int i=1; i<=item.size(); i++){
+        int size = item[i-1].first;
+        int value = item[i-1].second;
+        for(int j=1; j<=s; j++){
+            if(size > j){
+                dp[i][j] = dp[i-1][j];  
+            } else {   
+                dp[i][j] = max(dp[i-1][j], dp[i-1][j-size] + value);
+            }
+        }
+    }
+    return dp[item.size()][s];
+    
+}
+ 
+signed main(){
+ 
+    ISO();
+    //solution();
+ 	
+    int s,n;
+    cin>>s>>n;
+    vector<pair<int, int>>items(n);
+    for(int i=0; i<n; i++){
+        int size,value;
+        cin>>size>>value;
+        items[i] = make_pair(size, value);
+    }
+    int maxValue = knapsack(s, items);
+    cout<<maxValue<<endl;
+
+    return 0;
+}
