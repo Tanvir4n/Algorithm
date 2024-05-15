@@ -33,3 +33,37 @@ int main() {
 
     return 0;
 }
+
+// ---------------------------------------
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+void binary_search(int n, int k){
+    
+    vector<int>arr(n);
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+
+    for(int i=0; i<k; i++){
+
+        int src_ele;
+        cin >> src_ele;
+        int isfound = binary_search(arr.begin(), arr.end(), src_ele);
+
+        // int lb = lower_bound(arr.begin(), arr.end(),src_ele)-arr.begin();
+        // cout<<lb<<endl;
+        int ub = upper_bound(arr.begin(), arr.end(),src_ele) - arr.begin();
+      cout<<ub<<endl;
+    
+    }
+}
+signed main(){
+    
+    int n,k;
+    cin>>n>>k;
+ 
+    binary_search(n, k);
+    return 0;
+}
