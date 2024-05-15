@@ -49,16 +49,32 @@ int main(){
 
     int n, k;
     cin>>n>>k;
-
     vector<pair<int, int>> items(n);
     for(int i=0; i<n; i++){
         cin>>items[i].first>>items[i].second; // weight and tastiness
     }
-
     // Calculate maximum tastiness
     double result = maxTastiness(n, k, items);
-
     cout<<fixed<<setprecision(6)<<result<<endl;
 
     return 0;
 }
+/*
+Input
+The first line of input contains integers 𝑁 and 𝐾 number of items and the capacity of your bag.
+Each of next 𝑁 lines of input contains a pairs of integers (w1, t1),(w2, t2).....(wn, tn)— weights and tastiness of each item.
+1≤N≤10^5
+1≤K≤10^4
+1≤wi,ti≤10^4
+Output
+Print the maximum tastiness of iftar you can achieve.
+Your answer must be correct up to 6 decimal places.
+
+Sample
+Input	Output
+4 20    50.1428571429
+5 15
+6 10
+7 9
+5 20
+*/
