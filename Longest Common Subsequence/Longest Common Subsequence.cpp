@@ -58,3 +58,8 @@ signed main(){
 
     return 0;
 }
+/*
+ the overall complexity of this loop (considering all test cases) is influenced by the combined complexities of
+ invoking lcs for each pair of input lines, potentially leading to a time complexity of O(T * (m * n)) where T is 
+ the number of input pairs and m, n are the respective lengths of the input strings in each pair.
+*/
