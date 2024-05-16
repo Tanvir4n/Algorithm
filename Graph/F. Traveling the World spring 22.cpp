@@ -59,3 +59,19 @@ int main(){
     
     return 0;
 }
+/*
+Sample
+Input	 Output
+2         YES
+          NO
+3 3
+0 1
+2 0
+3 2
+
+4 3
+0 1
+2 1
+3 2
+
+*/
