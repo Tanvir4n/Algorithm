@@ -1,4 +1,4 @@
-// coin change coinWays by hamza
+// coin change minCountWays by hamza
 #include<bits/stdc++.h>
 using namespace std;
 
